@@ -122,7 +122,7 @@ function animationFrame(now: number) {
   const data = new Uint8Array(imageData.data.buffer);
   frameLoop: for (let y = 0; y < 520; y++) {
     waitFor(() => !getVGASignals().hsync);
-    for (let x = 0; x < 736; x++) {
+    for (let x = 0; x < 46; x += 16) {
       const offset = (y * 736 + x) * 4;
       jmod.tick2(16);
       const { hsync, vsync, r, g, b } = getVGASignals();
