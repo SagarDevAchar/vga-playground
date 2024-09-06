@@ -124,7 +124,7 @@ function animationFrame(now: number) {
     waitFor(() => !getVGASignals().hsync);
     for (let x = 0; x < 736; x++) {
       const offset = (y * 736 + x) * 4;
-      jmod.tick2(1);
+      jmod.tick2(16);
       const { hsync, vsync, r, g, b } = getVGASignals();
       if (hsync) {
         break;
